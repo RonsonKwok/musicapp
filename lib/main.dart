@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:musicapp/musicplayer/controllers/music_list_controller.dart';
+import 'package:musicapp/musicplayer/widgets/music_page.dart';
 
 void main() {
   Get.lazyPut(() => MusicListController());
@@ -26,9 +27,10 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      home: MusicPage(),
     );
   }
 }

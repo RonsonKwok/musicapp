@@ -13,7 +13,7 @@ class MusicListController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    debounce(searchKey, (newSearchKey) async {
+    debounce(searchKey, (String newSearchKey) async {
       final result = await musicRepository.getMusicItems(newSearchKey);
       musicItems.assignAll(result);
     }, time: const Duration(milliseconds: 450));
