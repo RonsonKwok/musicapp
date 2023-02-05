@@ -6,7 +6,7 @@ import 'package:musicapp/musicplayer/repositories/music_repository.dart';
 class MusicListController extends GetxController {
   final musicItems = RxList<MusicItem>([]); //put all state here
   final searchKey = "".obs;
-  final musicRepository = Get.find<MusicRepository>();
+  final musicRepository = Get.put(MusicRepository());
 
   static MusicListController get to => Get.find();
 
