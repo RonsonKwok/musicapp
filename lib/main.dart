@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Music Preview App',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
       home: MusicPage(),
