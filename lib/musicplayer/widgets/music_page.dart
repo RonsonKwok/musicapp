@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:musicapp/musicplayer/controllers/audio_player_controller.dart';
 import 'package:musicapp/musicplayer/controllers/music_list_controller.dart';
+import 'package:musicapp/musicplayer/widgets/music_list_view.dart';
 import 'package:musicapp/musicplayer/widgets/music_search_bar.dart';
 
 class MusicPage extends StatelessWidget {
@@ -20,12 +21,9 @@ class MusicPage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
-        body: Stack(children: [
-          Column(children: [
-            const MusicSearchBar(),
-            // Expanded(child: child)
-            // GetX<MusicListController>(builder: ())
-          ])
+        body: Column(children: [
+          SizedBox(width: double.infinity, child: MusicSearchBar()),
+          Expanded(child: MusicListView())
         ]));
   }
 }
