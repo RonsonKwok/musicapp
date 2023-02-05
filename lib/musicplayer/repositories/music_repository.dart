@@ -19,7 +19,7 @@ class MusicRepository {
         'term': searchTerm,
         'media': 'music',
         'attribute': 'mixTerm',
-        'limit': '15',
+        'limit': '50',
       },
     );
     var songResponse = await _httpClient.get(songRequest);
