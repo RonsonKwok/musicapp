@@ -18,8 +18,8 @@ class MusicRepository {
       <String, String>{
         'term': searchTerm,
         'media': 'music',
-        'attribute': 'artistTerm',
-        'limit': '5',
+        'attribute': 'mixTerm',
+        'limit': '15',
       },
     );
     var songResponse = await _httpClient.get(songRequest);
