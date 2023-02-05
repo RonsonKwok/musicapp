@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:musicapp/musicplayer/controllers/music_list_controller.dart';
+import 'package:musicapp/musicplayer/repositories/music_repository.dart';
 import 'package:musicapp/musicplayer/widgets/music_page.dart';
 
 void main() {
+  Get.lazyPut(() => MusicRepository());
   Get.lazyPut(() => MusicListController());
 
   runApp(const MyApp());
